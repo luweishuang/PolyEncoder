@@ -2,3 +2,5 @@
 ckpts/
 data/
 draft*
+__pycache__/
+model/__pycache__/

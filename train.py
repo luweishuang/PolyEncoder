@@ -67,15 +67,13 @@ def eval_running_model(dataloader):
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   ## Required parameters
-  # parser.add_argument("--bert_model", default='ckpt/pretrained/distilbert-base-uncased', type=str)
-  # parser.add_argument("--model_type", default='distilbert', type=str)
-  parser.add_argument("--bert_model", default='ckpt/pretrained/bert-small-uncased', type=str)
+  parser.add_argument("--bert_model", default='ckpts/pretrained/bert-small-uncased', type=str)
   parser.add_argument("--model_type", default='bert', type=str)
-  parser.add_argument("--output_dir", required=True, type=str)
+  parser.add_argument("--output_dir", default='ckpts/trained', type=str)
   parser.add_argument("--train_dir", default='data/ubuntu_data', type=str)
 
   parser.add_argument("--use_pretrain", action="store_true")
-  parser.add_argument("--architecture", required=True, type=str, help='[poly, bi]')
+  parser.add_argument("--architecture", default='bi', type=str, help='[poly, bi]')
 
   parser.add_argument("--max_contexts_length", default=128, type=int)
   parser.add_argument("--max_response_length", default=64, type=int)
